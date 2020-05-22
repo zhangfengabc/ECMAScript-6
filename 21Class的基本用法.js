@@ -52,7 +52,7 @@
 //使用的时候，也是直接对类使用new命令，跟构造函数的用法完全一致。
 
 //constructor 方法
-//constructor方法是类的默认方法，统一new命令生成对象实例时，自动调用该方法。
+//constructor方法是类的默认方法，统过new命令生成对象实例时，自动调用该方法。
 //一个类必须有constructor方法，如果没有显式定义，一个空的constructor方法会被默认添加
 // class Point {
 
