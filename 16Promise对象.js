@@ -273,6 +273,12 @@ p.then((val) => console.log('fulfilled', val))
 
 //6.Promise.all()
 
+//Promise.all()方法用于将多个Promise实例，包装成一个新的Promise实例。
+const p = Promise.all([p1, p2, p3])
+//上面代码中，Promise.all()方法接受一个数组作为参数，p1、p2、p3都是Promise实例，如果不是，就会调下面讲到的Promise.resolve方法，
+//将参数转为Promise实例，再进一步处理。
+//另外，Promise.all()方法的参数可以不是数组，但必须具有Iterator接口，且返回的每个成员都是Promise实例。
+
 //7.Promise.race()
 
 //8.Promise.allSettled()
