@@ -311,67 +311,67 @@
 
 
 //返回一个数组
-function example() {
-    return [1, 2, 3]
-}
-let [a, b, c] = example();
-console.log(a) //1
-console.log(b) //2
-console.log(c) //3
+// function example() {
+//     return [1, 2, 3]
+// }
+// let [a, b, c] = example();
+// console.log(a) //1
+// console.log(b) //2
+// console.log(c) //3
 
 //返回一个对象
-function example2() {
-    return {
-        foo: 1,
-        bar: 2
-    }
-}
-let { foo, bar } = example2();
-console.log(foo) //1
-console.log(bar) //2
+// function example2() {
+//     return {
+//         foo: 1,
+//         bar: 2
+//     }
+// }
+// let { foo, bar } = example2();
+// console.log(foo) //1
+// console.log(bar) //2
 
 //3)函数参数的定义
 //解构赋值可以方便地将一组参数与变量名应对起来
 
 //参数是一组有次序的值
-function f([x, y, z]) {}
-f([1, 2, 3])
+// function f([x, y, z]) {}
+// f([1, 2, 3])
 
 //参数是一组无次序的值
-function f({x, y, z}) {}
-f({z: 3, y: 2, x: 1})
+// function f({x, y, z}) {}
+// f({z: 3, y: 2, x: 1})
 
 //4)提取JSON数据
 //解构赋值对提取JSON对象中的数据，尤其有用
 
-let jsonData = {
-    id: 42,
-    status: "OK",
-    data: [867, 5309]
-}
-let { id, status, data: number } = jsonData;
-console.log(id, status, number) //42 OK [ 867, 5309 ]
+// let jsonData = {
+//     id: 42,
+//     status: "OK",
+//     data: [867, 5309]
+// }
+// let { id, status, data: number } = jsonData;
+// console.log(id, status, number) //42 OK [ 867, 5309 ]
 
 
 //5)函数参数的默认值
 
-JQuery.ajax = function (url, {
-    async = true,
-    beforeSend = function() {},
-    cache = true,
-    complete = function() {},
-    crossDomain = false,
-    global = true
-} = {}) {
+// JQuery.ajax = function (url, {
+//     async = true,
+//     beforeSend = function() {},
+//     cache = true,
+//     complete = function() {},
+//     crossDomain = false,
+//     global = true
+// } = {}) {
 
-}
+// }
 //指定参数的默认值
 
 //6) 遍历Map解构
 
 //7) 输入模块的指定方法
-//加载模块时，往往需要指定输入哪些方法。解构赋值使得输入语句非常清晰。
-const { SourceMapConsumer, SourceNode } = require('source-map')
+// //加载模块时，往往需要指定输入哪些方法。解构赋值使得输入语句非常清晰。
+// const { SourceMapConsumer, SourceNode } = require('source-map')
 
 
 
