@@ -227,19 +227,19 @@ for(let key in myObject) {
 
 //防抖debounce代码:
 //防抖
-function debounce(fn, wait) {
-    var timeout = null;
-    return function() {
-        if(timeout !== null) clearTimeout(timeout)
-        timeout = setTimeout(fn, wait)
-    }
-}
-//处理函数
-function handle() {
-    console.log(Math.random())
-}
-//滚动事件
-window.addEventListener('scroll', debounce(handle, 1000))
+// function debounce(fn, wait) {
+//     var timeout = null;
+//     return function() {
+//         if(timeout !== null) clearTimeout(timeout)
+//         timeout = setTimeout(fn, wait)
+//     }
+// }
+// //处理函数
+// function handle() {
+//     console.log(Math.random())
+// }
+// //滚动事件
+// window.addEventListener('scroll', debounce(handle, 1000))
 
 //当持续触发scroll事件时，事件处理函数handle只在停止滚动1000毫秒之后才会调用一次，
 //也就是说在持续触发scroll事件的过程中，事件处理函数handle一直没有执行。
@@ -252,5 +252,15 @@ window.addEventListener('scroll', debounce(handle, 1000))
 
 
 
+//面试题
+//数组去重
 
+let arr1 = [1, 3, 3, 11, 49, 5]
+// let arr2 = [2, 49]
+// let set = new Set(arr1,arr2)
+// let arr3 = Array.from(set)
+// console.log(set)
+// console.log(arr3, typeof arr3)
 
+let arr4 = [...new Set(arr1)]
+console.log(arr4)

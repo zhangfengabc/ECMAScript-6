@@ -373,8 +373,15 @@
 // //加载模块时，往往需要指定输入哪些方法。解构赋值使得输入语句非常清晰。
 // const { SourceMapConsumer, SourceNode } = require('source-map')
 
+//////////////////////////////////////////////////////start////////////////////////////////////////////////////////////////////////////////////////////
+let [foo = true] = []
+console.log(foo)  //true
 
+// let [x, y = 'b'] = ['a']
+// console.log(x, y) //a  b
 
+let [x, y = 'b'] = ['a', undefined]
+console.log(x, y) //a b
 
 
 

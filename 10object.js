@@ -64,21 +64,21 @@ module.exports = 'zf'
 //Object.assign方法的第一个参数是目标对象，后面的参数都是源对象
 // * 如果目标对象与源对象有同名属性，或多个源对象有同名属性，则后面的属性会覆盖前面的属性
 
-const target = {a:1,b:1}
-const source1 = {b:2,c:2}
-const source2 = {c:3}
-Object.assign(target,source1,source2)
-console.log(target) //{ a: 1, b: 2, c: 3 }
+// const target = {a:1,b:1}
+// const source1 = {b:2,c:2}
+// const source2 = {c:3}
+// Object.assign(target,source1,source2)
+// console.log(target) //{ a: 1, b: 2, c: 3 }
 
 
 
-//如果只有一个参数，Object.assign 会直接返回该参数
-// const obj = {a:1}
-// Object.assign(obj) === obj // true
+// //如果只有一个参数，Object.assign 会直接返回该参数
+// // const obj = {a:1}
+// // Object.assign(obj) === obj // true
 
-//如果该参数不是对象，则会先转成对象，然后返回
-let type = typeof Object.assign(2)
-console.log(type) //Object
+// //如果该参数不是对象，则会先转成对象，然后返回
+// let type = typeof Object.assign(2)
+// console.log(type) //Object
 
 //由于undefined 和 null 无法转成对象，所以如果他们作为参数，就会报错
 
@@ -171,13 +171,60 @@ console.log(type) //Object
 
 
 //5.Object.keys(),    Object.values(),   Object.entries()
+//ES5引入了Object.keys方法，返回一个数组，成员是参数对象自身的所有可遍历属性的键名
+// var obj = { foo: 'bar', baz: 42}
+// var oA = Object.keys(obj)
+// console.log(oA) //[ 'foo', 'baz' ]
+
+
+
+// let {keys, values, entries } = Object;
+// let obj = { a: 1, b: 2, c: 3}
+// for(let key of keys(obj)){
+//     console.log(key)
+// }
+// // a
+// // b
+// // c
+// for(let value of values(obj)){
+//     console.log(value)
+// }
+// // 1
+// // 2
+// // 3
+// for(let [key, value] of entries(obj)){
+//     console.log([key, value])
+// }
+
+// [ 'a', 1 ]
+// [ 'b', 2 ]
+// [ 'c', 3 ]
 
 
 
 
 
+//Object.values方法返回一个数组，成员是参数对象自身的（不含继承的）所有可遍历属性的键值
+// const obj = { foo: 'bar', baz: 42}
+// let oB = Object.values(obj)
+// console.log(oB)
+//[ 'bar', 42 ]
+
+//Object.entries()方法返回一个数组，成员是参数对象自身的（不含继承的）所有可遍历属性的键值对数组。
+
+// const obj = { foo: 'bar', baz: 42 }
+// let oC = Object.entries(obj)
+// console.log(oC)
+//[ [ 'foo', 'bar' ], [ 'baz', 42 ] ]
 
 
 
+//6.  Object.formEntries()
+//Object.fromEntries()方法是Object.entries()的逆操作，用于将一个键值对数组转为对象
 
-
+let oFE = Object.fromEntries([
+    ['foo', 'bar'],
+    ['baz', 42]
+])
+console.log(oFE)
+//[ [ 'foo', 'bar' ], [ 'baz', 42 ] ]

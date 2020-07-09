@@ -1,9 +1,9 @@
 //let 和 const命令
 
-for(let i = 0; i < 3; i++) {
-    let i = 'abc';
-    console.log(i)
-}
+// for(let i = 0; i < 3; i++) {
+//     let i = 'abc';
+//     console.log(i)
+// }
 
 // abc
 // abc
@@ -38,13 +38,13 @@ for(let i = 0; i < 3; i++) {
 
 
 //将对象冻结，应该使用Object.freeze方法
-const foo = Object.freeze({})
+// const foo = Object.freeze({})
 
 
 
 
 
-
+//
 
 
 
